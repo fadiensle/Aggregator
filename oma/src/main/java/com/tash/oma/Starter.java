@@ -45,7 +45,7 @@ public class Starter {
 		LocalDate date = LocalDate.of(LocalDate.now().getYear(), month, start_date);
 		final StringBuilder result = new StringBuilder();
 		while (date != null) {
-			final String day = date.format(DateTimeFormatter.ofPattern("dd.MM.YYYY"));
+                        final String day = date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 			result.append("<h1>").append(day).append("</h1>");
 			for (ChannelParser channel : channels) {
 				final DateTimeFormatter format = DateTimeFormatter.ofPattern(channel.getDateFormat());
